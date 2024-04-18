@@ -25,7 +25,8 @@ jobs:
     # The steps that will be executed
     steps:
       # Check-out your repository under $GITHUB_WORKSPACE, so your job can access it 
-      #- uses: action/checkout@v2
+      - name: Step 1 - Checkout main branch from GitHub
+        uses: action/checkout@v2
 
       #Runs a single command using the runner shell
       - name: Run a one-line script
