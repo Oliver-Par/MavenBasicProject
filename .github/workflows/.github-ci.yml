@@ -1,0 +1,33 @@
+# Basic overlay for github workflows
+
+name: .github-ci
+
+# Controls when the workflow is started
+
+on:
+  # Triggers wirkflow on push or pull event (but only in main)
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run the workflow manually
+  workflow_dispatch:
+
+# A workflow is made up of one or more jobs (sequentially or parallel)
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on:
+      - self-hosted
+
+    # The steps that will be executed
+    steps:
+      # Check-out your repository under $GITHUB_WORKSPACE, so your job can access it 
+      - uses: action/checkout@v2
+
+      #Runs a single command using the runner shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
