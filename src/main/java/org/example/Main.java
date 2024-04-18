@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Main {
 
     public static String sayHello(){
-        return "Hello andwelcome!";
+        return "Hello and welcome!";
     }
 
     public static String[] countdown(int x){
