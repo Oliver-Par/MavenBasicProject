@@ -20,7 +20,7 @@ public class Main {
             ++counter;
         }
 
-        return output;
+        return output
     }
     public static void main(String[] args) {
 
